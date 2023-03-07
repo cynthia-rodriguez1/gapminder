@@ -17,7 +17,7 @@ As a humble ode to Hans Rosling's [Gapminder](https://www.gapminder.org/about/),
 
 Life expectancy is an abstract measure of the number of years a person can expect to live, and varies based on several factors, some of which are less visible than others. We've combined multiple datasets that include information like average income person, population, and geological region of individual countries across three centuries.
 
-Our goal is to build a regression model that can predict a country's average life expectancy, as well as a classification model that can predict a country's life expectancy category (low, medium, or high for a given year) based on the same features. Our benchmark of success will be a minimum 0.85 R<sup>2</sup> score and maximum 5 RMSE for our regression model, and at least 85% accuracy for our classification model.
+Our goal is to build a regression model that can predict a country's average life expectancy, as well as a classification model that can predict a country's life expectancy category (low, medium, or high for a given year) based on the same features. Our benchmark of success will be a minimum 0.85 R<sup>2</sup> score and maximum RMSE of 5 for our regression model, and at least 85% accuracy for our classification model.
 
 **Approach & Goal**:
 

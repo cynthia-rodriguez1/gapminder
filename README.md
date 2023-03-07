@@ -17,7 +17,7 @@ As a humble ode to Hans Rosling's [Gapminder](https://www.gapminder.org/about/),
 
 Life expectancy is an abstract measure of the number of years a person can expect to live, and varies based on several factors, some of which are less visible than others. We've combined multiple datasets that include information like average income person, population, and geological region of individual countries across three centuries.
 
-Our goal is to build a regression model that can predict a country's average life expectancy, as well as a classification model that can predict a country's life expectancy category (low, medium, or high for a given year) based on the same features. Our benchmark of success will be a minimum 0.85 R^2^ score and maximum 5 RMSE for our regression model, and at least 85% accuracy for our classification model.
+Our goal is to build a regression model that can predict a country's average life expectancy, as well as a classification model that can predict a country's life expectancy category (low, medium, or high for a given year) based on the same features. Our benchmark of success will be a minimum 0.85 R<sup>2</sup> score and maximum 5 RMSE for our regression model, and at least 85% accuracy for our classification model.
 
 **Approach & Goal**:
 
@@ -30,22 +30,22 @@ The purpose of this notebook is to explore the relationships between our origina
 
 Following are examples of the explorations conducted:
 
-####**What is the mean income per person for each life expectancy category?**
+#### **What is the mean income per person for each life expectancy category?**
 ![](visualizations/bar_mean_inc_by_life_exp_cat.png)
 
-####**How has the mean life expectancy been affected in each continent after critical global events?**
+#### **How has the mean life expectancy been affected in each continent after critical global events?**
 ![](visualizations/line_mean_life_exp_by_continent.png)
 
-####**Are we able to provide additional context around the life expectancy categories seen most often in each continent?**
+#### **Are we able to provide additional context around the life expectancy categories seen most often in each continent?**
 ![](visualizations/bar_freq_life_exp_cat_by_continent.png)
 
-####**How did the mean income per person change between the 19th and 21st centuries?**
+#### **How did the mean income per person change between the 19th and 21st centuries?**
 ![](visualizations/line_global_mean_inc_log2.png)
 
-####**Can we look at mean income per person and life expectancy for all countries in a given year?**
+#### **Can we look at mean income per person and life expectancy for all countries in a given year?**
 ![](visualizations/scatter_mean_inc_v_life_exp_2018.png)
 
-####**Can we plot the same as above, but dynamically so that it changes for each year and allows us to compare relative growth over time?**
+#### **Can we plot the same as above, but dynamically so that it changes for each year and allows us to compare relative growth over time?**
 - Yes, we can! To view this dynamic plot, please visit [this link](https://public.tableau.com/app/profile/cynthia.rodriguez6815/viz/GapminderRecreation_16710692756720/Gapminder).
 
 # Modeling
@@ -53,9 +53,9 @@ Notebook can be found [here](03_modeling.ipynb).
 
 We ran a total of 12 regression models, first with just the original dataset columns, then with the engineered feature additions.
 
-Our best regression model was the Random Forest Regressor, and achieved an RMSE of 1.63 and an R^2^ of 0.99. If we were selecting a production model based on RMSE alone, Random Forest is the clear champion with our Bagging Regressor following closely behind. However, we are also taking our models' variance into account, as we cannot proceed with any model that is overfit on the training set and will perform poorly on unseen data.
+Our best regression model was the Random Forest Regressor, and achieved an RMSE of 1.63 and an R<sup>2</sup> of 0.99. If we were selecting a production model based on RMSE alone, Random Forest is the clear champion with our Bagging Regressor following closely behind. However, we are also taking our models' variance into account, as we cannot proceed with any model that is overfit on the training set and will perform poorly on unseen data.
 
-With this in mind, our final model would likely be either KNN, which achieved an RMSE of 2.05, and train/test R^2^ scores of .991 and .984, respectively, or our Gradient Boost model that produced a moderately higher RMSE of 3.87, but also had two of the closest train/test R^2^ scores of .948 and .944, respectively.
+With this in mind, our final model would likely be either KNN, which achieved an RMSE of 2.05, and train/test R<sup>2</sup> scores of .991 and .984, respectively, or our Gradient Boost model that produced a moderately higher RMSE of 3.87, but also had two of the closest train/test R<sup>2</sup> scores of .948 and .944, respectively.
 
 For our classification models, the setup was similar, though this time we were trying to predict either 'low,' 'medium,' or 'high' life expectancy class based on countries' mean income per person, geo, and population.
 
@@ -65,7 +65,7 @@ Another frontrunner in our classification trials was the KNN Classifier, which s
 
 # Results
 
-We were able to meet our target metrics of 5 RMSE and 80% accuracy in our regression and classification models. Random Forest produced the best scores in our regression and classification trials, but was also one of the more overfit models in both. In terms of which models we'd move forward with in production, our KNN Regressor achieved an RMSE of just 2.05 and a test R^2^ score of 0.984. For classification, our KNN and Bagging classifiers both scored in the high 90s for accuracy and were less overfit than the Random Forest model.
+We were able to meet our target metrics of 5 RMSE and 80% accuracy in our regression and classification models. Random Forest produced the best scores in our regression and classification trials, but was also one of the more overfit models in both. In terms of which models we'd move forward with in production, our KNN Regressor achieved an RMSE of just 2.05 and a test R<sup>2</sup> score of 0.984. For classification, our KNN and Bagging classifiers both scored in the high 90s for accuracy and were less overfit than the Random Forest model.
 
 All of that said, we believe there are more factors that play a role in a country's life expectancy than we saw in our data.
 

@@ -30,26 +30,26 @@ The purpose of this notebook is to explore the relationships between our origina
 
 Following are examples of the explorations conducted:
 
-#### **What is the mean income per person for each life expectancy category?**
+### **What is the mean income per person for each life expectancy category?**
 ![](visualizations/bar_mean_inc_by_life_exp_cat.png)
 
-#### **How has the mean life expectancy been affected in each continent after critical global events?**
+### **How has the mean life expectancy been affected in each continent after critical global events?**
 ![](visualizations/line_mean_life_exp_by_continent.png)
 
-#### **Are we able to provide additional context around the life expectancy categories seen most often in each continent?**
+### **Are we able to provide additional context around the life expectancy categories seen most often in each continent?**
 ![](visualizations/bar_freq_life_exp_cat_by_continent.png)
 
-#### **How did the mean income per person change between the 19th and 21st centuries?**
+### **How did the mean income per person change between the 19th and 21st centuries?**
 ![](visualizations/line_global_mean_inc_log2.png)
 
-#### **Can we look at mean income per person and life expectancy for all countries in a given year?**
+### **Can we look at mean income per person and life expectancy for all countries in a given year?**
 ![](visualizations/scatter_mean_inc_v_life_exp_2018.png)
 
-#### **Can we plot the same as above, but dynamically so that it changes for each year and allows us to compare relative growth over time?**
+### **Can we plot the same as above, but dynamically so that it changes for each year and allows us to compare relative growth over time?**
 - Yes, we can! To view this dynamic plot, please visit [this link](https://public.tableau.com/app/profile/cynthia.rodriguez6815/viz/GapminderRecreation_16710692756720/Gapminder).
 
 # Modeling
-Notebook can be found [here](03_modeling.ipynb).
+Notebook can be found [here](./notebooks/03_modeling.ipynb).
 
 We ran a total of 12 regression models, first with just the original dataset columns, then with the engineered feature additions.
 
